@@ -1,4 +1,5 @@
 import profile from "@/assets/profile.jpeg";
+import { Link } from "react-router-dom";
 
 export const Navigation = () => {
   return (
@@ -18,8 +19,12 @@ export const Navigation = () => {
           </div>
 
           <ul className="flex flex-row items-center gap-8 list-none m-0 p-0">
-            <li>Profile</li>
-            <li>Blog</li>
+            <li>
+              <Link to="/">Profile</Link>
+            </li>
+            <li>
+              <Link to="/blog">Blog</Link>
+            </li>
           </ul>
         </div>
       </nav>
