@@ -1,20 +1,35 @@
-import { Contact } from "@/components/Contact";
-import { Hero } from "@/components/Hero";
 import { Navigation } from "@/components/Navigation";
-import { Profile } from "@/components/Profile";
+import { BlogPage } from "@/pages/BlogPage";
+import { ProfilePage } from "@/pages/ProfilePage";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 
-export const App = () => {
+const Layout = () => {
   return (
     <>
       <Navigation />
-      <main>
-        <Hero />
-
-        <div className="flex flex-col sm:flex-row gap-4 px-4 sm:px-6 lg:px-8 pb-8 max-w-6xl mx-auto">
-          <Profile />
-          <Contact />
-        </div>
+      <main id="main-content" className="min-h-screen">
+        <Outlet />
       </main>
     </>
   );
+};
+
+const ROUTER = createBrowserRouter([
+  {
+    element: <Layout />,
+    children: [
+      {
+        path: "/",
+        element: <ProfilePage />,
+      },
+      {
+        path: "/blog",
+        element: <BlogPage />,
+      },
+    ],
+  },
+]);
+
+export const App = () => {
+  return <RouterProvider router={ROUTER} />;
 };
