@@ -2,7 +2,7 @@ import profile from "@/assets/profile.jpeg";
 
 export const Hero = () => {
   return (
-    <section className="flex items-center justify-center min-h-[80vh] sm:min-h-[85vh] lg:min-h-[90vh] pt-24 sm:pt-28 lg:pt-32 px-4 sm:px-6 lg:px-8 w-full">
+    <section className="flex items-center justify-center min-h-[60vh] sm:min-h-[65vh] lg:min-h-[70vh] pt-32 sm:pt-28 lg:pt-32 px-4 sm:px-6 lg:px-8 pb-8 w-full">
       <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 max-w-6xl w-full">
         <div className="flex-shrink-0">
           <img
@@ -17,7 +17,7 @@ export const Hero = () => {
             Hi, I'm Brian.
           </h1>
           <p className="text-lg sm:text-xl lg:text-2xl text-gray-600 leading-relaxed">
-            I am a software engineer living in Madison, WI with my dog, Roscoe.
+            I love aviation, technology, and my amazing dog, Roscoe
           </p>
         </div>
       </div>
