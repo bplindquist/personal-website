@@ -8,8 +8,8 @@ export const AboutMe = () => {
       <div className="flex flex-col gap-6">
         {/* Education */}
         <div className="flex items-center gap-4 group">
-          <div className="p-3 rounded-xl bg-gradient-to-br from-purple-50 to-purple-100 transition-all flex-shrink-0">
-            <HiAcademicCap className="w-6 h-6 text-purple-600" />
+          <div className="p-3 rounded-xl bg-gradient-to-br from-teal-50 to-teal-100 transition-all flex-shrink-0">
+            <HiAcademicCap className="w-6 h-6 text-teal-600" />
           </div>
           <div className="flex-1">
             <p className="text-sm text-gray-500 font-medium">Education</p>
@@ -21,8 +21,8 @@ export const AboutMe = () => {
 
         {/* Location */}
         <div className="flex items-center gap-4 group">
-          <div className="p-3 rounded-xl bg-gradient-to-br from-orange-50 to-orange-100 transition-all flex-shrink-0">
-            <HiLocationMarker className="w-6 h-6 text-orange-600" />
+          <div className="p-3 rounded-xl bg-gradient-to-br from-red-50 to-red-100 transition-all flex-shrink-0">
+            <HiLocationMarker className="w-6 h-6 text-red-600" />
           </div>
           <div className="flex-1">
             <p className="text-sm text-gray-500 font-medium">Location</p>
