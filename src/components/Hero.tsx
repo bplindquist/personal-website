@@ -2,6 +2,7 @@ import profile from "@/assets/profile.jpeg";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiBluesky } from "react-icons/si";
 import { HiArrowDown, HiCode, HiSparkles } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 const GITHUB_PROFILE_ID = import.meta.env.VITE_GITHUB_PROFILE_ID;
 const LINKEDIN_PROFILE_ID = import.meta.env.VITE_LINKEDIN_PROFILE_ID;
@@ -100,12 +101,12 @@ export const Hero = () => {
               >
                 Get in Touch
               </a>
-              <a
-                href="/experience"
+              <Link
+                to="/experience"
                 className="w-full sm:w-auto px-8 py-4 bg-white text-slate-700 font-semibold rounded-xl shadow-lg hover:shadow-xl border border-slate-200 hover:border-sky-200 hover:text-sky-600 transition-all duration-300 text-center"
               >
                 View My Work
-              </a>
+              </Link>
             </div>
 
             {/* Social links */}
@@ -146,8 +147,8 @@ export const Hero = () => {
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
+        {/* Scroll indicator - hidden on mobile to prevent overlap */}
+        <div className="hidden sm:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 animate-bounce">
           <span className="text-sm text-slate-400 font-medium">
             Scroll to explore
           </span>
