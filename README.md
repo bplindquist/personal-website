@@ -1,9 +1,28 @@
-# Personal Website
+# Brian Lindquist - Personal Website
 
-## 🚧 Under Construction 🚧
+My personal portfolio website showcasing 8+ years of frontend engineering experience.
 
-This is my personal website.
+🔗 **Live Site:** [brianlindquist.io](https://brianlindquist.io)
 
-### Styling
+## Tech Stack
 
-Styling is handled with Tailwind CSS.
+- **Framework:** React 19 with TypeScript
+- **Routing:** React Router v7
+- **Styling:** Tailwind CSS v4
+- **Build Tool:** Vite
+- **Icons:** React Icons
+
+## Features
+
+- ⚡ Fast, modern single-page application
+- 📱 Fully responsive design
+- ♿ Accessible (semantic HTML, ARIA labels, keyboard navigation)
+- 🎨 Sleek UI with gradient accents and animations
+- 🔍 SEO optimized with meta tags and Open Graph support
+
+## Pages
+
+- **Home** - Hero section, about me, skills, and contact form
+- **Experience** - Career timeline with roles and achievements
+- **Projects** - Portfolio showcase (coming soon)
+- **Blog** - Technical articles and insights (coming soon)
