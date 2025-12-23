@@ -15,7 +15,7 @@ export const BlogPage = () => {
               Blog & <span className="gradient-text">Insights</span>
             </h1>
             <p className="text-xl text-slate-500 max-w-2xl mx-auto">
-              Sharing 8+ years of frontend engineering wisdom, tips, and lessons
+              Sharing 9+ years of frontend engineering wisdom, tips, and lessons
               learned from the trenches.
             </p>
           </div>

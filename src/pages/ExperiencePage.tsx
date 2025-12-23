@@ -80,7 +80,7 @@ export const ExperiencePage = () => {
               Professional <span className="gradient-text">Experience</span>
             </h1>
             <p className="text-xl text-slate-500 max-w-2xl mx-auto mb-8">
-              8+ years of building web and mobile applications, leading teams,
+              9+ years of building web and mobile applications, leading teams,
               and delivering solutions for startups to Fortune 500 companies.
             </p>
 

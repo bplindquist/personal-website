@@ -6,7 +6,7 @@ import {
 } from "react-icons/hi";
 
 const highlights = [
-  { value: "8+", label: "Years Experience" },
+  { value: "9+", label: "Years Experience" },
   { value: "100%", label: "Remote Ready" },
   { value: "Enterprise", label: "& Startup Clients" },
   { value: "Full Stack", label: "Web & Mobile" },
@@ -26,7 +26,7 @@ export const AboutMe = () => {
             <span className="gradient-text">great products</span>
           </h2>
           <p className="text-lg text-slate-500 max-w-2xl mx-auto">
-            8+ years of turning complex problems into elegant, user-friendly
+            9+ years of turning complex problems into elegant, user-friendly
             solutions
           </p>
         </div>
@@ -38,7 +38,7 @@ export const AboutMe = () => {
               key={stat.label}
               className="group p-6 bg-white rounded-2xl shadow-sm hover:shadow-xl border border-slate-100 hover:border-sky-200 transition-all duration-300 text-center"
             >
-              <div className="text-3xl sm:text-4xl font-bold gradient-text mb-2">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold gradient-text mb-2">
                 {stat.value}
               </div>
               <div className="text-sm text-slate-500 font-medium">
