@@ -61,7 +61,15 @@ export const AboutMe = () => {
             <p className="text-lg text-slate-700 font-semibold">
               UNC Wilmington
             </p>
-            <p className="text-sm text-slate-500 mt-1">Computer Science</p>
+            <p className="text-sm text-slate-500 mt-1">
+              Finance & Management Information Systems
+            </p>
+            <p className="text-sm text-teal-600 font-medium mt-2">
+              Summa Cum Laude
+            </p>
+            <p className="text-xs text-slate-500 mt-1">
+              Outstanding Graduate of Finance
+            </p>
           </div>
 
           {/* Location */}
