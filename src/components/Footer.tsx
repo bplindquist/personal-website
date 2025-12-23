@@ -26,7 +26,7 @@ export const Footer = () => {
               <span className="font-semibold text-lg">Brian Lindquist</span>
             </div>
             <p className="text-slate-400 text-sm">
-              Senior Frontend Engineer with 10+ years of experience building
+              Senior Frontend Engineer with 9+ years of experience building
               exceptional web experiences.
             </p>
           </div>

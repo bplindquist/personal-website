@@ -19,7 +19,7 @@ const techStack = [
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-20 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center pt-20 pb-28 sm:pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Background decorations */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-20 left-10 w-72 h-72 bg-sky-400/20 rounded-full blur-3xl animate-float" />
@@ -44,7 +44,7 @@ export const Hero = () => {
               {/* Floating badge */}
               <div className="absolute -bottom-2 -right-2 bg-white rounded-2xl shadow-xl px-4 py-2 flex items-center gap-2">
                 <HiSparkles className="w-5 h-5 text-amber-500" />
-                <span className="font-semibold text-slate-700">8+ Years</span>
+                <span className="font-semibold text-slate-700">9+ Years</span>
               </div>
             </div>
           </div>
@@ -69,7 +69,7 @@ export const Hero = () => {
 
             <p className="text-xl sm:text-2xl text-slate-600 font-medium">
               Senior Frontend Engineer with{" "}
-              <span className="text-sky-600 font-semibold">8+ years</span> of
+              <span className="text-sky-600 font-semibold">9+ years</span> of
               experience crafting exceptional digital experiences
             </p>
 
@@ -146,14 +146,14 @@ export const Hero = () => {
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Scroll indicator - hidden on mobile to prevent overlap */}
-        <div className="hidden sm:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 animate-bounce">
-          <span className="text-sm text-slate-400 font-medium">
-            Scroll to explore
-          </span>
-          <HiArrowDown className="w-5 h-5 text-slate-400" />
-        </div>
+      {/* Scroll indicator - positioned relative to section */}
+      <div className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
+        <span className="text-sm text-slate-400 font-medium">
+          Scroll to explore
+        </span>
+        <HiArrowDown className="w-5 h-5 text-slate-400" />
       </div>
     </section>
   );
