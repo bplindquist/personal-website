@@ -1,6 +1,6 @@
 # Brian Lindquist - Personal Website
 
-My personal portfolio website showcasing 9+ years of frontend engineering experience.
+My personal portfolio website showcasing 10+ years of frontend engineering experience.
 
 🔗 **Live Site:** [brianlindquist.io](https://brianlindquist.io)
 

@@ -44,7 +44,7 @@ export const Hero = () => {
               {/* Floating badge */}
               <div className="absolute -bottom-2 -right-2 bg-white rounded-2xl shadow-xl px-4 py-2 flex items-center gap-2">
                 <HiSparkles className="w-5 h-5 text-amber-500" />
-                <span className="font-semibold text-slate-700">9+ Years</span>
+                <span className="font-semibold text-slate-700">10+ Years</span>
               </div>
             </div>
           </div>
@@ -69,7 +69,7 @@ export const Hero = () => {
 
             <p className="text-xl sm:text-2xl text-slate-600 font-medium">
               Senior Frontend Engineer with{" "}
-              <span className="text-sky-600 font-semibold">9+ years</span> of
+              <span className="text-sky-600 font-semibold">10+ years</span> of
               experience crafting exceptional digital experiences
             </p>
 
