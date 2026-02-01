@@ -1,8 +1,9 @@
 import { Navigation } from "@/components/Navigation";
-import { BlogPage } from "@/pages/BlogPage";
-import { ProfilePage } from "@/pages/ProfilePage";
-import { ExperiencePage } from "@/pages/ExperiencePage";
-import { ProjectsPage } from "@/pages/ProjectsPage";
+import { Footer } from "@/components/Footer";
+import { HomePage } from "@/pages/home-page";
+import { AboutPage } from "@/pages/about-page";
+import { ProjectsPage } from "@/pages/projects-page";
+import { ContactPage } from "@/pages/contact-page";
 import {
   createBrowserRouter,
   Outlet,
@@ -10,42 +11,31 @@ import {
   ScrollRestoration,
 } from "react-router-dom";
 
-const Layout = () => {
+function Layout() {
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Navigation />
-      <main id="main-content" className="min-h-screen">
+      <main className="flex-1">
         <Outlet />
       </main>
+      <Footer />
       <ScrollRestoration />
-    </>
+    </div>
   );
-};
+}
 
-const ROUTER = createBrowserRouter([
+const router = createBrowserRouter([
   {
     element: <Layout />,
     children: [
-      {
-        path: "/",
-        element: <ProfilePage />,
-      },
-      {
-        path: "/experience",
-        element: <ExperiencePage />,
-      },
-      {
-        path: "/projects",
-        element: <ProjectsPage />,
-      },
-      {
-        path: "/blog",
-        element: <BlogPage />,
-      },
+      { path: "/", element: <HomePage /> },
+      { path: "/about", element: <AboutPage /> },
+      { path: "/projects", element: <ProjectsPage /> },
+      { path: "/contact", element: <ContactPage /> },
     ],
   },
 ]);
 
-export const App = () => {
-  return <RouterProvider router={ROUTER} />;
-};
+export function App() {
+  return <RouterProvider router={router} />;
+}
