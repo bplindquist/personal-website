@@ -1,8 +1,13 @@
 import { ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui/card";
 import { Container, Section, PageHeader } from "@/components/layout";
 
 interface Project {
@@ -78,11 +83,11 @@ function ProjectCard({ project }: { project: Project }) {
 export function ProjectsPage() {
   return (
     <>
-      <Section className="pt-32">
+      <Section className="pt-28 md:pt-36">
         <Container size="sm">
           <PageHeader
             title="Projects"
-            description="A selection of things I've built. More to come as I carve out time between flying lessons and dog walks."
+            description="Here are a few projects to play around with. More coming soon!"
           />
 
           <div className="space-y-6">
@@ -107,8 +112,6 @@ export function ProjectsPage() {
           </div>
         </Container>
       </Section>
-
-      <Separator />
     </>
   );
 }

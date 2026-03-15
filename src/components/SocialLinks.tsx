@@ -1,54 +1,42 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
+const BLUESKY_PROFILE = import.meta.env.VITE_BLUESKY_PROFILE;
 const GITHUB_PROFILE_ID = import.meta.env.VITE_GITHUB_PROFILE_ID;
 const LINKEDIN_PROFILE_ID = import.meta.env.VITE_LINKEDIN_PROFILE_ID;
-const BLUESKY_PROFILE = import.meta.env.VITE_BLUESKY_PROFILE;
-const EMAIL_ADDRESS = import.meta.env.VITE_EMAIL_ADDRESS;
 
 interface SocialLinksProps {
   className?: string;
-  showLabels?: boolean;
 }
 
 const socials = [
   {
-    name: "GitHub",
     href: `https://github.com/${GITHUB_PROFILE_ID}`,
     icon: Github,
+    name: "GitHub",
   },
   {
-    name: "LinkedIn",
     href: `https://linkedin.com/in/${LINKEDIN_PROFILE_ID}`,
     icon: Linkedin,
+    name: "LinkedIn",
   },
   {
-    name: "Bluesky",
     href: `https://bsky.app/profile/${BLUESKY_PROFILE}`,
     icon: () => (
       <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor">
         <path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-3.912.58-7.387 2.005-2.83 7.078 5.013 5.19 6.87-1.113 7.823-4.308.953 3.195 2.05 9.271 7.733 4.308 4.267-4.308 1.172-6.498-2.74-7.078a8.741 8.741 0 0 1-.415-.056c.14.017.279.036.415.056 2.67.297 5.568-.628 6.383-3.364.246-.828.624-5.79.624-6.478 0-.69-.139-1.861-.902-2.206-.659-.298-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8Z" />
       </svg>
     ),
-  },
-  {
-    name: "Email",
-    href: `mailto:${EMAIL_ADDRESS}`,
-    icon: Mail,
+    name: "Bluesky",
   },
 ];
 
-export function SocialLinks({ className, showLabels = false }: SocialLinksProps) {
+export function SocialLinks({ className }: SocialLinksProps) {
   return (
-    <div className={cn("flex items-center gap-2", className)}>
+    <div className={cn("flex items-center gap-1", className)}>
       {socials.map((social) => (
-        <Button
-          key={social.name}
-          variant="ghost"
-          size={showLabels ? "default" : "icon"}
-          asChild
-        >
+        <Button key={social.name} variant="ghost" size="icon" asChild>
           <a
             href={social.href}
             target="_blank"
@@ -56,7 +44,6 @@ export function SocialLinks({ className, showLabels = false }: SocialLinksProps)
             aria-label={social.name}
           >
             <social.icon />
-            {showLabels && <span>{social.name}</span>}
           </a>
         </Button>
       ))}
