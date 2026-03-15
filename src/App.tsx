@@ -1,15 +1,14 @@
-import { Navigation } from "@/components/Navigation";
-import { Footer } from "@/components/Footer";
-import { HomePage } from "@/pages/home-page";
-import { AboutPage } from "@/pages/about-page";
-import { ProjectsPage } from "@/pages/projects-page";
-import { ContactPage } from "@/pages/contact-page";
 import {
   createBrowserRouter,
   Outlet,
   RouterProvider,
   ScrollRestoration,
 } from "react-router-dom";
+import { Footer } from "@/components/Footer";
+import { Navigation } from "@/components/Navigation";
+import { AboutPage } from "@/pages/About";
+import { HomePage } from "@/pages/Home";
+import { ProjectsPage } from "@/pages/Projects";
 
 function Layout() {
   return (
@@ -31,7 +30,6 @@ const router = createBrowserRouter([
       { path: "/", element: <HomePage /> },
       { path: "/about", element: <AboutPage /> },
       { path: "/projects", element: <ProjectsPage /> },
-      { path: "/contact", element: <ContactPage /> },
     ],
   },
 ]);

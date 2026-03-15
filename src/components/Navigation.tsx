@@ -1,15 +1,12 @@
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
+import { useEffect, useState } from "react";
 import { Container } from "@/components/layout";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { to: "/", label: "Home" },
-  { to: "/about", label: "About" },
-  { to: "/projects", label: "Projects" },
-  { to: "/contact", label: "Contact" },
+  { label: "About", to: "/about" },
+  { label: "Projects", to: "/projects" },
 ];
 
 export function Navigation() {
@@ -30,62 +27,67 @@ export function Navigation() {
   return (
     <header
       className={cn(
-        "fixed top-0 w-full z-50 transition-all duration-300",
+        "fixed top-0 w-full z-50 transition-colors duration-200",
         isScrolled
-          ? "bg-background/80 backdrop-blur-md border-b"
-          : "bg-transparent"
+          ? "bg-background/90 backdrop-blur-sm border-b"
+          : "bg-transparent",
       )}
     >
       <Container>
-        <nav className="flex items-center justify-between h-16">
-          <Link
-            to="/"
-            className="flex items-center gap-3 font-semibold text-foreground"
-          >
-            <div className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">BL</span>
-            </div>
-            <span className="hidden sm:block">Brian Lindquist</span>
+        <nav className="flex items-center justify-between h-14">
+          <Link to="/" className="text-foreground font-semibold tracking-tight">
+            Brian Lindquist
           </Link>
 
-          <ul className="hidden md:flex items-center gap-1">
+          <ul className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <li key={link.to}>
-                <Button
-                  variant={location.pathname === link.to ? "secondary" : "ghost"}
-                  asChild
+                <Link
+                  to={link.to}
+                  className={cn(
+                    "text-sm transition-colors",
+                    location.pathname === link.to
+                      ? "text-foreground"
+                      : "text-muted-foreground hover:text-foreground",
+                  )}
                 >
-                  <Link to={link.to}>{link.label}</Link>
-                </Button>
+                  {link.label}
+                </Link>
               </li>
             ))}
           </ul>
 
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden"
+          <button
+            className="md:hidden text-foreground"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
-            {isMenuOpen ? <X /> : <Menu />}
-          </Button>
+            {isMenuOpen ? (
+              <X className="h-5 w-5" />
+            ) : (
+              <Menu className="h-5 w-5" />
+            )}
+          </button>
         </nav>
       </Container>
 
       {isMenuOpen && (
         <div className="md:hidden bg-background border-b">
           <Container>
-            <ul className="py-4 space-y-2">
+            <ul className="py-4 space-y-3">
               {navLinks.map((link) => (
                 <li key={link.to}>
-                  <Button
-                    variant={location.pathname === link.to ? "secondary" : "ghost"}
-                    className="w-full justify-start"
-                    asChild
+                  <Link
+                    to={link.to}
+                    className={cn(
+                      "block text-sm",
+                      location.pathname === link.to
+                        ? "text-foreground"
+                        : "text-muted-foreground",
+                    )}
                   >
-                    <Link to={link.to}>{link.label}</Link>
-                  </Button>
+                    {link.label}
+                  </Link>
                 </li>
               ))}
             </ul>
